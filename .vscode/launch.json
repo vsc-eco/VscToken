@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // to launch in debugger, install truffle-core with command 'npm install truffle-core'
+            "type": "node",
+            "request": "launch",
+            "name": "truffle test (debugable)",
+            "cwd": "${workspaceFolder}/vsc",
+            "program": "${workspaceFolder}/vsc/node_modules/truffle-core/cli.js",
+            "args": [
+                "test"
+            ]
+        }
+    ]
+}
