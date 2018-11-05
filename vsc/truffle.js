@@ -21,6 +21,20 @@ module.exports = {
       host: "127.0.0.1",
       port: 9545,
       network_id: "*" // Match any network id
+    },
+    testnetBingInspiron: {
+      host: "192.168.20.190",
+      port: 8545,
+      network_id: 3, // Match any network id
+      gas: 4612388,
+      gasPrice: 50000000000 // 50 GWei
+    },
+    testnetLocal: {
+      host: "127.0.0.1",
+      port: 8545,
+      network_id: 3, // Match any network id
+      gas: 4612388,
+      gasPrice: 50000000000 // 50 GWei
     }
   }  
 };
