@@ -1,3 +1,4 @@
+// test with the token-test-suite
 const suite = require('../node_modules/token-test-suite/lib/suite');
 const VscToken = artifacts.require('VscToken');
 const TWO_BILLION_IN_WEI = '2000000000'+'000000000000000000'

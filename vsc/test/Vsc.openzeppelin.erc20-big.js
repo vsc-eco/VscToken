@@ -1,4 +1,4 @@
-// this is the open-zeppelin ERC20 token test
+// this is the open-zeppelin ERC20 token test with 2billion supply
 
 const shouldFail = require('openzeppelin-solidity/test/helpers/shouldFail');
 const expectEvent = require('openzeppelin-solidity/test/helpers/expectEvent');
