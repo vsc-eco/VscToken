@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "truffle test",
+    "flatten": "truffle-flattener contracts/VscToken.sol"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "chai": "^4.2.0",
     "chai-bignumber": "^2.0.2",
     "openzeppelin-solidity": "^2.0.0",
-    "token-test-suite": "0.0.3"
+    "token-test-suite": "0.0.3",
+    "web3": "^0.20.6"
   }
 }
