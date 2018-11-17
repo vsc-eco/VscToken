@@ -17,6 +17,9 @@
     "chai-bignumber": "^2.0.2",
     "openzeppelin-solidity": "^2.0.0",
     "token-test-suite": "0.0.3",
-    "web3": "^0.20.6"
+    "web3": "^0.20.6",
+    "truffle-core": "^4.1.14"
+  },
+  "dependencies": {
   }
 }

@@ -3,5 +3,7 @@
     "solidity.soliumRules": {
         "quotes": ["error", "double"],
         "indentation": ["warn", 4]
-    }
+    },
+    "solidity.packageDefaultDependenciesContractsDirectory": "",
+    "solidity.packageDefaultDependenciesDirectory": "vsc/node_modules",    
 }

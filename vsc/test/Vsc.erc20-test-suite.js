@@ -9,12 +9,7 @@ contract('VscToken', function (accounts) {
 
 		// factory method to create new token contract
 		create: async function () {
-			return await VscToken.new(
-                "Ventures Coin",
-                "VSC",
-                18,
-                TWO_BILLION_IN_WEI
-            );
+			return await VscToken.new();
 		},
 
 		// factory callbacks to mint the tokens
