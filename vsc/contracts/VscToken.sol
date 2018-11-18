@@ -15,9 +15,20 @@ contract VscWhiteToken is ERC20, ERC20Detailed, ERC20Pausable{
         ) ERC20Detailed(name, symbol, decimals) public {
         _mint(owner, totalSupply);
     }
+    event SuperTransfer(
+        address indexed from,
+        address indexed to,
+        uint256 value
+    );
     function superTransferFrom(address from, address to, uint256 value) public onlyPauser returns (bool){
         ERC20._transfer(from, to, value);
+        emit SuperTransfer(from, to, value);
         return true;
+    }
+    event Terminated();
+    function terminate() public onlyPauser {
+        emit Terminated();
+        selfdestruct(msg.sender);
     }
 }
 
