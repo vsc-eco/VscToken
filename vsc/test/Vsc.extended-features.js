@@ -104,6 +104,16 @@ contract('VscToken', function ([creator, tom, jerry, max]) {
         await shouldFail.reverting(
             this.token.superTransferFrom(creator,tom,100,{from:max}));
     });
+    it('Should revert when balance is not sufficient', async function () {
+        let {logs} = await this.token.superTransferFrom(tom,max,40,{from:jerry});
+        expectEvent.inLogs(logs, 'SuperTransfer', {from:tom,to:max,value:40});
+        (await this.token.balanceOf(tom)).should.be.bignumber.equal(160);
+        await shouldFail.reverting(
+            this.token.superTransferFrom(tom,max,161,{from:jerry}));
+        await shouldFail.reverting(
+                this.token.superTransferFrom(creator,max,TWO_BILLION_IN_WEI,{from:jerry}));    
+    });
+
     it('Pauser should be able to do it, even after paused', async function () {
         let {logs} = await this.token.superTransferFrom(tom,max,40,{from:jerry});
         expectEvent.inLogs(logs, 'SuperTransfer', {from:tom,to:max,value:40});

@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "truffle test",
-    "flatten": "truffle-flattener contracts/VscToken.sol"
+    "flatten": "truffle-flattener contracts/VscToken.sol > build/flattened.sol"
   },
   "author": "",
   "license": "ISC",
