@@ -20,6 +20,5 @@
     "web3": "^0.20.6",
     "truffle-core": "^4.1.14"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
